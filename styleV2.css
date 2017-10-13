@@ -1,0 +1,41 @@
+.body, .contain, .row {
+  display: flex;
+}
+
+.contain {
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  /*background-color: purple;*/
+}
+
+.row {
+  flex: 1;
+  height: 40%;
+  /*height: 10vh;*/
+  width: 80%;
+  /*background-color: lightblue;*/
+  /*border: 1px solid red;*/
+  /*padding: 10px;*/
+
+}
+
+.square {
+  flex: 1;
+  height: 30vh;
+  flex-direction: column;
+  width: 20vh;
+  /*height: 5%;*/
+  border: 0.25px solid Gainsboro;
+  float: left;
+  /*padding-bottom: 2%;*/
+  background-color: WhiteSmoke;
+  /*margin: 1px;*/
+}
+
+/*sq.style.width="7.5%";
+sq.style.float="left";
+sq.style.paddingBottom="10%";
+sq.style.border="5px solid black";
+sq.style.backgroundColor = "grey";*/
