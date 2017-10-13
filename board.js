@@ -1,7 +1,7 @@
 var rowArr = [];
 var sqArr = [];
 
-for (let i=0; i<4; i++) {
+for (let i=0; i<100; i++) {
   var contain = document.getElementsByClassName("contain")[0];
   var row = document.createElement("div");
   contain.appendChild(row);
@@ -9,7 +9,7 @@ for (let i=0; i<4; i++) {
   row.id=`${i}`
   rowArr.push(row);
 
-  for (let j=0; j<20; j++) {
+  for (let j=0; j<100; j++) {
     var sq = document.createElement("div");
     row.appendChild(sq);
     sq.className="square";
