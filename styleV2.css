@@ -3,17 +3,58 @@
 }
 
 .contain {
-  flex-direction: column;
-  padding: 20px;
-  align-items: center;
-  justify-content: center;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
 }
+
+.board {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  max-height: 100vh;
+}
+
+.left {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  max-height: 100vh;
+  /*align-items: stretch;*/
+}
+
+.right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.col {
+  display: flex;
+  /*justify-content: space-between;*/
+  /*align-items: stretch;*/
+  max-height: 100vh;
+  flex: 1;
+  flex-direction: row;
+}
+
+.tile {
+  flex: 1;
+  /*min-height: 5vh;*/
+  flex-direction: row;
+}
+
 
 .row {
   flex: 1;
   height: 1%;
   /*height: 10vh;*/
-  width: 80%;
+  width: 100%;
+  flex-direction: row;
   /*background-color: lightblue;*/
   /*border: 1px solid red;*/
   /*padding: 10px;*/
@@ -24,7 +65,7 @@
   flex: 1;
   height: 1vh;
   flex-direction: column;
-  width: 20vh;
+  width: 1vh;
   /*height: 5%;*/
   border: 0.25px solid Gainsboro;
   float: left;
