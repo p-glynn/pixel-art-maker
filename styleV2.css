@@ -23,7 +23,6 @@
   flex: 1;
   flex-direction: column;
   max-height: 100vh;
-  /*align-items: stretch;*/
 }
 
 .right {
@@ -35,8 +34,6 @@
 
 .col {
   display: flex;
-  /*justify-content: space-between;*/
-  /*align-items: stretch;*/
   max-height: 100vh;
   flex: 1;
   flex-direction: row;
@@ -44,7 +41,6 @@
 
 .tile {
   flex: 1;
-  /*min-height: 5vh;*/
   flex-direction: row;
 }
 
@@ -52,13 +48,8 @@
 .row {
   flex: 1;
   height: 1%;
-  /*height: 10vh;*/
   width: 100%;
   flex-direction: row;
-  /*background-color: lightblue;*/
-  /*border: 1px solid red;*/
-  /*padding: 10px;*/
-
 }
 
 .square {
@@ -66,16 +57,7 @@
   height: 1vh;
   flex-direction: column;
   width: 1vh;
-  /*height: 5%;*/
   border: 0.25px solid Gainsboro;
   float: left;
-  /*padding-bottom: 2%;*/
   background-color: WhiteSmoke;
-  /*margin: 1px;*/
 }
-
-/*sq.style.width="7.5%";
-sq.style.float="left";
-sq.style.paddingBottom="10%";
-sq.style.border="5px solid black";
-sq.style.backgroundColor = "grey";*/

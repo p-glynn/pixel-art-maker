@@ -8,7 +8,7 @@ for (let i=0; i<100; i++) {
   row.className="row";
   row.id=`${i}`
 
-  for (let j=0; j<50; j++) {
+  for (let j=0; j<100; j++) {
     var sq = document.createElement("div");
     row.appendChild(sq);
     sq.className="square";
@@ -17,7 +17,7 @@ for (let i=0; i<100; i++) {
   }
 }
 
-for (let c=0; c<25; c++) {
+for (let c=0; c<35; c++) {
   var left = document.getElementsByClassName("left")[0];
   var leftCol = document.createElement("div");
   leftCol.className="col";
@@ -28,7 +28,7 @@ for (let c=0; c<25; c++) {
   rightCol.className="col";
   right.appendChild(rightCol);
 
-  for (let t=0; t<10; t++) {
+  for (let t=0; t<15; t++) {
     var leftTile = document.createElement("div");
     leftTile.className="tile";
     leftCol.prepend(leftTile);
@@ -41,8 +41,7 @@ for (let c=0; c<25; c++) {
   }
 }
 
-
-// console.log(sqArr);
+// var moDown =  false;
 
 for (let square of sqArr) {
   square.addEventListener("mouseover", function () {
@@ -52,10 +51,12 @@ for (let square of sqArr) {
 
 var currentColor;
 
-for (var tile of tileArr) {
-  tile.addEventListener("click", selectColor());
-}
-
+left.addEventListener("click", function () {
+  currentColor = event.target.style.backgroundColor;
+}, false);
+right.addEventListener("click", function () {
+  currentColor = event.target.style.backgroundColor;
+}, false);
 
 function randomColor() {
   var letters = '0123456789ABCDEF';
@@ -66,8 +67,9 @@ function randomColor() {
   return color;
 }
 
-function selectColor() {
-  currentColor = tile.style.backgroundColor;
-  console.log(currentColor);
-  return currentColor;
+function tileReplace(){
+ var randIndex = Math.ceil(Math.random()*tileArr.length-1);
+ var newTileColor = tileArr[randIndex].style.backgroundColor = randomColor();
 }
+
+var intervalID = window.setInterval(tileReplace, 1000);
