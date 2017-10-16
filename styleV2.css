@@ -18,6 +18,15 @@
   max-height: 100vh;
 }
 
+.random {
+  flex: 0.1;
+  background: linear-gradient(45deg, violet, indigo, blue, green, orange, yellow, red);
+  text-align: center;
+  font-size: 30px;
+  color: black;
+  font-family: monospace;
+}
+
 .left {
   display: flex;
   flex: 1;
@@ -27,7 +36,7 @@
 
 .control {
   display: flex;
-  flex: 4;
+  flex: 3;
   background-color: whitesmoke;
   max-height: 20vh;
 }
@@ -43,11 +52,11 @@
 }*/
 
 .erase {
-  flex: 1;
-  font-size: 70px;
+  flex: 2;
+  font-size: 40px;
   text-align: center;
-  font-family: cursive;
-  color: black;
+  font-family: monospace;
+  color: white;
   background-color: pink;
   max-height: 100vh;
   max-width: 20vw;

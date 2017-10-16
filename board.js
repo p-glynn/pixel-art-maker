@@ -48,6 +48,9 @@ for (let c=0; c<35; c++) {
   }
 }
 
+random.addEventListener("click", function () {
+  isRandom = true;
+})
 
 board.addEventListener("mousedown", function () {
   mouseIsDown = true;
@@ -56,15 +59,19 @@ contain.addEventListener("mouseup", function() {
   mouseIsDown = false;
 })
 left.addEventListener("click", function () {
+  isRandom = false;
   currentColor = event.target.style.backgroundColor;
 }, false);
 right.addEventListener("click", function () {
+  isRandom = false;
   currentColor = event.target.style.backgroundColor;
 }, false);
 board.addEventListener("mouseover", function () {
-  if (mouseIsDown === true) {
+  if (mouseIsDown === true && isRandom === true) {
+    currentColor = randomColor();
     event.target.style.backgroundColor = currentColor;
-    console.log(currentColor)
+  } else if (mouseIsDown === true) {
+    event.target.style.backgroundColor = currentColor;
   }
 })
 
