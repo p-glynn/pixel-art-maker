@@ -1,5 +1,11 @@
 var sqArr = [];
 var tileArr = [];
+var currentColor;
+var mouseIsDown;
+var contain = document.getElementsByClassName("contain")[0];
+var random = document.getElementsByClassName("random")[0];
+var eraser = document.getElementsByClassName("eraser")[0];
+var isRandom = false;
 
 for (let i=0; i<100; i++) {
   var board = document.getElementsByClassName("board")[0];
@@ -18,6 +24,7 @@ for (let i=0; i<100; i++) {
 }
 
 for (let c=0; c<35; c++) {
+
   var left = document.getElementsByClassName("left")[0];
   var leftCol = document.createElement("div");
   leftCol.className="col";
@@ -41,22 +48,26 @@ for (let c=0; c<35; c++) {
   }
 }
 
-// var moDown =  false;
 
-for (let square of sqArr) {
-  square.addEventListener("mouseover", function () {
-    square.style.backgroundColor = currentColor;
-  }, false);
-}
-
-var currentColor;
-
+board.addEventListener("mousedown", function () {
+  mouseIsDown = true;
+})
+contain.addEventListener("mouseup", function() {
+  mouseIsDown = false;
+})
 left.addEventListener("click", function () {
   currentColor = event.target.style.backgroundColor;
 }, false);
 right.addEventListener("click", function () {
   currentColor = event.target.style.backgroundColor;
 }, false);
+board.addEventListener("mouseover", function () {
+  if (mouseIsDown === true) {
+    event.target.style.backgroundColor = currentColor;
+    console.log(currentColor)
+  }
+})
+
 
 function randomColor() {
   var letters = '0123456789ABCDEF';
@@ -69,7 +80,7 @@ function randomColor() {
 
 function tileReplace(){
  var randIndex = Math.ceil(Math.random()*tileArr.length-1);
- var newTileColor = tileArr[randIndex].style.backgroundColor = randomColor();
+ tileArr[randIndex].style.backgroundColor = randomColor();
 }
 
 var intervalID = window.setInterval(tileReplace, 1000);

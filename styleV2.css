@@ -25,6 +25,34 @@
   max-height: 100vh;
 }
 
+.control {
+  display: flex;
+  flex: 4;
+  background-color: whitesmoke;
+  max-height: 20vh;
+}
+
+/*.random {
+  flex: 1;
+  font-size: 70px;
+  text-align: center;
+  font-family: cursive;
+  color: white;
+  background: linear-gradient(45deg, blue, red);
+  max-height: 100vh;
+}*/
+
+.erase {
+  flex: 1;
+  font-size: 70px;
+  text-align: center;
+  font-family: cursive;
+  color: black;
+  background-color: pink;
+  max-height: 100vh;
+  max-width: 20vw;
+}
+
 .right {
   display: flex;
   flex: 1;
